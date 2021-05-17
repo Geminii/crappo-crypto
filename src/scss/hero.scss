@@ -1,0 +1,118 @@
+.hero {
+  background-color: var(--bg-color);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+  }
+
+  &__text {
+    max-width: 588px;
+    padding-bottom: 140px;
+
+    h1 {
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 76px;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+
+    p {
+      max-width: 435px;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.01em;
+      color: #e0e0e0;
+      margin-bottom: 32px;
+    }
+
+    .text__badge {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 32px;
+      padding: 4px 11px 4px 4px;
+      display: inline-block;
+      margin-bottom: 24px;
+
+      .badge__promotion {
+        background: #ffffff;
+        border-radius: 32px;
+        padding: 4px 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: #0d0d2b;
+      }
+
+      .badge__label {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__illustration {
+    .line {
+      position: absolute;
+      bottom: -70%;
+      left: 70%;
+      width: 120px;
+      height: 997.88px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.04) 34.75%,
+        rgba(255, 255, 255, 0.01) 100%
+      );
+      transform: rotate(-120deg);
+      &:last-child {
+        left: 25%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__text h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .hero__text {
+    padding-bottom: 0;
+  }
+
+  .hero__illustration .line {
+    bottom: -70%;
+    left: 100%;
+    width: 60px;
+    height: 997.88px;
+  }
+
+  .hero__illustration .line:last-child {
+    left: 65%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero .container {
+    padding-bottom: 50px;
+  }
+
+  .hero__illustration {
+    display: none;
+  }
+
+  .hero__text .text__badge .badge__label {
+    display: block;
+    padding-top: 4px;
+  }
+}

@@ -1,0 +1,104 @@
+.starter-mining {
+  background: linear-gradient(180deg, #2b076e 0%, #0d0d2b 100%);
+  padding: 88px 0;
+
+  &__banner {
+    background: #3671e9;
+    border-radius: 16px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 20px;
+      width: 160px;
+      height: 259px;
+      background: url('../assets/img/vector-ethereum.svg') no-repeat;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -70px;
+      right: 15px;
+      width: 140px;
+      height: 185px;
+      background: url('../assets/img/vector-bitcoin.svg') no-repeat;
+    }
+
+    .banner__text {
+      max-width: 348px;
+
+      h3 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 150%;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+      }
+    }
+
+    .banner__subscribe {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        min-width: 374px;
+        padding: 7px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        margin-right: 40px;
+
+        &::placeholder {
+          color: #ffffff;
+        }
+      }
+
+      .btn-subscribe {
+        padding: 14px 32px;
+        background: #ffffff;
+        border-radius: 32px;
+        text-align: center;
+        color: var(--bg-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .starter-mining__banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .starter-mining__banner .banner__text {
+    margin-bottom: 12px;
+  }
+
+  .starter-mining__banner .banner__subscribe input {
+    min-width: 190px;
+  }
+}
+
+// @media screen and (max-width: 550px) {
+//   .starter-mining__banner .banner__subscribe input {
+//     min-width: 190px;
+//   }
+// }
