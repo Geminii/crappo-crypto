@@ -38,7 +38,10 @@ footer {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-column-gap: 24px;
         opacity: 0;
-        animation: slideIn 0.75s forwards 0.2s ease;
+
+        &.visible {
+          animation: slideIn 0.75s forwards 0.2s ease;
+        }
 
         img {
           width: 96px;
@@ -66,7 +69,10 @@ footer {
       justify-content: space-between;
       width: 248px;
       opacity: 0;
-      animation: slideIn 0.75s forwards 0.2s ease;
+
+      &.visible {
+        animation: slideIn 0.75s forwards 0.2s ease;
+      }
 
       img {
         width: 24px;

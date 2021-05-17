@@ -12,7 +12,10 @@
     position: relative;
     overflow: hidden;
     opacity: 0;
-    animation: scaleIn 0.75s forwards 0.2s ease;
+
+    &.visible {
+      animation: scaleIn 0.75s forwards 0.2s ease;
+    }
 
     &:before {
       position: absolute;
