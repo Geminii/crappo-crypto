@@ -13,6 +13,8 @@
   &__text {
     max-width: 588px;
     padding-bottom: 140px;
+    opacity: 0;
+    animation: slideIn 1s forwards 0.2s ease;
 
     h1 {
       font-weight: bold;
@@ -61,6 +63,9 @@
   }
 
   &__illustration {
+    opacity: 0;
+    animation: slideIn 1s forwards 0.5s ease;
+
     .line {
       position: absolute;
       bottom: -70%;

@@ -11,6 +11,8 @@
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    animation: scaleIn 0.75s forwards 0.2s ease;
 
     &:before {
       position: absolute;
@@ -96,9 +98,3 @@
     min-width: 190px;
   }
 }
-
-// @media screen and (max-width: 550px) {
-//   .starter-mining__banner .banner__subscribe input {
-//     min-width: 190px;
-//   }
-// }

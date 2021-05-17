@@ -20,6 +20,8 @@
 
     .feat__text {
       max-width: 450px;
+      opacity: 0;
+      animation: slideIn 1s forwards 0.3s ease;
 
       h3 {
         font-weight: bold;
@@ -39,14 +41,20 @@
     }
 
     img.feat__illu-invest {
+      opacity: 0;
+      animation: slideIn 1s forwards 0.5s ease;
       max-height: 427px;
     }
 
     img.feat__illu-statistics {
+      opacity: 0;
+      animation: slideIn 1s forwards 0.2s ease;
       max-height: 453px;
     }
 
     img.feat__illu-table {
+      opacity: 0;
+      animation: slideIn 1s forwards 0.5s ease;
       max-height: 334px;
     }
   }

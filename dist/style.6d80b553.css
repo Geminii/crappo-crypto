@@ -190,6 +190,57 @@ body {
     padding: 0 24px;
   }
 }
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes smoothIn {
+  0% {
+    transform: translateX(-30px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.25);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 header {
   background-color: var(--bg-color);
   padding-top: 60px;
@@ -242,14 +293,6 @@ header .header__links .links__access .access__separator {
   opacity: 0.3;
 }
 
-@keyframes rotateLogo {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-90deg);
-  }
-}
 @media screen and (max-width: 875px) {
   header .header__links .links__access {
     margin-left: 24px;
@@ -278,6 +321,8 @@ header .header__links .links__access .access__separator {
 .hero__text {
   max-width: 588px;
   padding-bottom: 140px;
+  opacity: 0;
+  animation: slideIn 1s forwards 0.2s ease;
 }
 .hero__text h1 {
   font-weight: bold;
@@ -318,6 +363,10 @@ header .header__links .links__access .access__separator {
   letter-spacing: 0.01em;
   color: #ffffff;
   margin-left: 16px;
+}
+.hero__illustration {
+  opacity: 0;
+  animation: slideIn 1s forwards 0.5s ease;
 }
 .hero__illustration .line {
   position: absolute;
@@ -383,6 +432,8 @@ header .header__links .links__access .access__separator {
 .reasons__numbers .numbers__group {
   display: flex;
   align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s ease;
 }
 .reasons__numbers .numbers__group img {
   width: 80px;
@@ -432,6 +483,8 @@ header .header__links .links__access .access__separator {
 .reasons__why .why__illustration {
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  animation: slideIn 1s forwards 0.2s ease;
 }
 .reasons__why .why__illustration .illustration__line {
   position: absolute;
@@ -444,6 +497,8 @@ header .header__links .links__access .access__separator {
 }
 .reasons__why .why__text {
   max-width: 480px;
+  opacity: 0;
+  animation: slideIn 1s forwards 0.5s ease;
 }
 .reasons__why .why__text h2 {
   font-weight: bold;
@@ -546,6 +601,8 @@ header .header__links .links__access .access__separator {
   border-radius: 16px;
   background: #fff;
   text-align: center;
+  opacity: 0;
+  animation: smoothIn 0.75s forwards 0.2s ease;
 }
 .trade-securely__cryptocurrencies .cryptocurrencies__card img.card__cryptocurrency {
   width: 80px;
@@ -637,6 +694,8 @@ header .header__links .links__access .access__separator {
 }
 .features__feat .feat__text {
   max-width: 450px;
+  opacity: 0;
+  animation: slideIn 1s forwards 0.3s ease;
 }
 .features__feat .feat__text h3 {
   font-weight: bold;
@@ -653,12 +712,18 @@ header .header__links .links__access .access__separator {
   margin-bottom: 32px;
 }
 .features__feat img.feat__illu-invest {
+  opacity: 0;
+  animation: slideIn 1s forwards 0.5s ease;
   max-height: 427px;
 }
 .features__feat img.feat__illu-statistics {
+  opacity: 0;
+  animation: slideIn 1s forwards 0.2s ease;
   max-height: 453px;
 }
 .features__feat img.feat__illu-table {
+  opacity: 0;
+  animation: slideIn 1s forwards 0.5s ease;
   max-height: 334px;
 }
 .features .container {
@@ -711,6 +776,8 @@ header .header__links .links__access .access__separator {
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  animation: scaleIn 0.75s forwards 0.2s ease;
 }
 .starter-mining__banner:before {
   position: absolute;
@@ -821,6 +888,8 @@ footer .footer__links .links__category .category__cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-column-gap: 24px;
+  opacity: 0;
+  animation: slideIn 0.75s forwards 0.2s ease;
 }
 footer .footer__links .links__category .category__cards img {
   width: 96px;
@@ -842,6 +911,8 @@ footer .footer__others .others__social {
   align-items: center;
   justify-content: space-between;
   width: 248px;
+  opacity: 0;
+  animation: slideIn 0.75s forwards 0.2s ease;
 }
 footer .footer__others .others__social img {
   width: 24px;

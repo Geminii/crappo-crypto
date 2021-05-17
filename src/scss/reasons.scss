@@ -15,6 +15,8 @@
     .numbers__group {
       display: flex;
       align-items: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards 0.5s ease;
 
       img {
         width: 80px;
@@ -72,6 +74,8 @@
     .why__illustration {
       position: relative;
       overflow: hidden;
+      opacity: 0;
+      animation: slideIn 1s forwards 0.2s ease;
 
       .illustration__line {
         position: absolute;
@@ -90,6 +94,8 @@
 
     .why__text {
       max-width: 480px;
+      opacity: 0;
+      animation: slideIn 1s forwards 0.5s ease;
 
       h2 {
         font-weight: bold;

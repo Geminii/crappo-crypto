@@ -40,6 +40,8 @@
       border-radius: 16px;
       background: #fff;
       text-align: center;
+      opacity: 0;
+      animation: smoothIn 0.75s forwards 0.2s ease;
 
       img.card__cryptocurrency {
         width: 80px;
