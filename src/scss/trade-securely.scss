@@ -7,15 +7,79 @@
   }
 
   &__calculator {
-    background-color: #fff;
     filter: drop-shadow(0px 20px 200px rgba(57, 23, 119, 0.05));
-    border-radius: 16px;
     width: 942px;
     height: 371px;
     margin: 0 auto;
     position: absolute;
-    top: -155px;
+    top: -148px;
     left: 12%;
+
+    .calculator__form {
+      background-color: #fbfcfe;
+      padding: 48px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      div {
+        width: 100%;
+        display: flex;
+        padding-right: 48px;
+      }
+
+      input {
+        width: 100%;
+        margin-right: 48px;
+      }
+
+      select,
+      input {
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 8px;
+        min-width: 200px;
+      }
+    }
+
+    .calculator__info {
+      padding: 48px;
+      background-color: #fff;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+
+      h4 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+
+      .info__conversion {
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: #0d0d2b;
+
+        span {
+          color: var(--color-primary);
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color: #828282;
+      }
+    }
   }
 
   h2 {
@@ -99,14 +163,41 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .trade-securely .container {
+    padding-top: 380px;
+  }
+
   .trade-securely__calculator {
-    width: 200px;
+    width: calc(100% - 80px);
+    left: 40px;
+    right: 40px;
+  }
+
+  .trade-securely__calculator .calculator__form {
+    input,
+    select,
+    button {
+      margin-top: 12px;
+    }
+  }
+
+  .trade-securely__calculator .calculator__form,
+  .trade-securely__calculator .calculator__info {
+    padding: 24px;
+  }
+
+  .trade-securely__calculator .calculator__info .info__conversion {
+    font-size: 18px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .trade-securely__calculator {
-    width: 200px;
+  .trade-securely__calculator .calculator__form {
+    flex-direction: column;
+
+    div {
+      flex-direction: column;
+    }
   }
 
   .trade-securely__cryptocurrencies {
